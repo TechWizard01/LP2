@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>jQuery Mobile Website</title>
+  </head>
+  <body>
+    <div data-role="page" id="page1">
+      <div data-role="header">
+        <h1>jQuery Mobile Website</h1>
+      </div>
+      <div data-role="content" class="ui-content">
+        <p>Hey there, this is an example of jQuery Mobile Website</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias vel blanditiis non repudiandae asperiores, nemo doloremque mollitia cumque enim sapiente vero voluptatibus dignissimos beatae unde aperiam provident, commodi, harum. Molestias possimus recusandae quis, cumque qui laboriosam eos incidunt voluptatibus nulla.</p>
+      </div>
+      <div data-role="footer">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#page1" data-icon="grid" class="ui-btn-active">Page 1</a></li>
+                <li><a href="#page2" data-icon="star">Page 2</a></li>
+                <li><a href="#form" data-icon="plus">Form</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div data-role="page" id="page2">
+      <div data-role="header">
+        <h1>My Profile</h1>
+      </div>
+      <div data-role="content">
+        <h1>About Myself</h1>
+        <p>Something about me... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, corporis.</p>
+        <h2>Contact me</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/">Click here!</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/">Click here!</a></p>
+      </div>
+      <div data-role="footer">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#page1" data-icon="grid">Page 1</a></li>
+                <li><a href="#page2" data-icon="star" class="ui-btn-active">Page 2</a></li>
+                <li><a href="#form" data-icon="plus">Form</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div data-role="page" id="form">
+      <div data-role="header">
+        <h3>Enrollment Form</h3>
+      </div>
+      <div role="main" class="ui-content">
+        <h3>Form Page</h3>
+
+        <label for="text-basic">Name </label>
+        <input type="text" name="name" id="text-basic" value="" />
+
+        <label for="text-basic">Roll No </label>
+        <input type="number" name="roll" id="text-basic" value="" />
+
+        <label for="text-basic">College </label>
+        <input type="text" name="college" id="text-basic" value="" />
+
+        <label for="date">Select Date</label>
+        <input type="date" name="date" id="date" value="" />
+
+        <label for="file">Select File</label>
+        <input type="file" name="file" id="file" value="" />
+      </div>
+      <div data-role="footer">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#page1" data-icon="grid">Page 1</a></li>
+                <li><a href="#page2" data-icon="star" >Page 2</a></li>
+                <li><a href="#form" data-icon="plus" class="ui-btn-active">Form</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
