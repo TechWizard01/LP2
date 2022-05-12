@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+
+      // function test() {
+      //   console.log(
+      //     document.getElementById("name").value,
+      //     document.getElementById("cnslmarks").value,
+      //     document.getElementById("wadlmarks").value,
+      //     document.getElementById("dsbdamarks").value,
+      //     document.getElementById("cclmarks").value,
+      //   );
+      // }
+
+      function postData(){
+
+        // var form = document.forms['post'];
+
+        var url = "http://localhost:9000/students";
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+           if (xhr.readyState === 4) {
+              console.log(xhr.status);
+              console.log(xhr.responseText);
+           }};
+
+        // xhr.send(`{"name": "${form.name.value}", "cnslmarks": "${form.cnslmarks.value}", "wadlmarks": "${form.wadlmarks.value}", "dsbdalmarks": "${form.dsbdalmarks.value}", "cclmarks": "${form.cclmarks.value}"}`);
+        xhr.send(JSON.stringify({
+          "name" : document.getElementById("name").value,
+          "cnslmarks" : document.getElementById("cnslmarks").value,
+          "wadlmarks" : document.getElementById("wadlmarks").value,
+          "cclmarks" : document.getElementById("cclmarks").value,
+          "dsbdalmarks" : document.getElementById("dsbdamarks").value
+        }))
+      }
+    </script>
+    <meta charset="utf-8">
+    <title>Form for Posting a Student Update</title>
+  </head>
+  <body>
+    <form class="form" name="post" onsubmit="postData()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="cnslmarks">CNSL:</label>
+	    <input type="number" id="cnslmarks" required>
+      <label for="wadlmarks">WADL:</label>
+      <input type="number" id="wadlmarks" required>
+      <label for="cclmarks">CCL:</label>
+      <input type="number" id="cclmarks" required>
+      <label for="dsbdamarks">DSBDAL:</label>
+      <input type="number" id="dsbdamarks" required>
+	    <!-- <input type="submit" value="Submit"> -->
+      <button type="submit">Submit</button>
+    </form>
+
+  </body>
+</html>
